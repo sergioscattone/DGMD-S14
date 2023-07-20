@@ -2,7 +2,8 @@
 
 ## Solution
 
-Our project aims to create an air quality sensor that could be used as a wearable and inform the user if the air quality around them is poor, prompting them to take action by turning on an air purifier or wearing a mask. We will use an Arduino dust sensor to build out a physical device, and display the output on a dashboard. On the dashboard we will also pull in air quality measures from other sources, like the Environmental Protection Agency (EPA). 
+Our project aims to create an air quality sensor that could be used as a wearable and inform the user if the air quality around them is poor, prompting them to take action by turning on an air purifier or wearing a mask. <br/>
+We will use an Arduino dust sensor to build out a physical device, and display the output on a dashboard. On the dashboard we will also pull in air quality measures from other sources, like the Environmental Protection Agency (EPA). 
 
 ## Hardware
 
