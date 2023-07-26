@@ -8,21 +8,20 @@ On the dashboard we will also pull in air quality measures from other sources, l
 
 ## Hardware
 
-### Andruino
+### Arduino
 
-Brief description
+We have an Arduino Uno Board attached to a grove input shield. We connect this board to a laptop over USB which provides both power and a means of bi-directional data transfer. We use the microcontroller to take measurements every 30 seconds and pass that information to the serial port where additional processing or data transfer can take place. In our proof of concept we directly stream the serial port output and write it to a csv.
 
-### Sensor 1
+### Seeedlabs Temperature and humidity sensor
 
-Brief description
+The Seedlabs temperature and humidity sensor outputs temperature in celsius and relative humidity
+as digital values. We read these alongside the PM sensor as the sensor cannot properly function above 45 degrees celsius or 95% humidity. 
 
-### Sensor 2
+### Seeedlabs Grove Dust Sensor
 
-Brief description
+The Seeedlabs Grove Dust Sensor is a Shinyei PPD42 dust sensor vendored by Seeed Labs to be connected to an  Arduino board over a grove connector that reliably measure particles in between 1um and 2.5ums in size. When there are particles present, the sensor switches from producing a high voltage output to a low voltage output. To calculate the particle concentration, we regularly sample the output of the sensor and  calulate the %age of  time that the sensor is producing low voltage output. We then use the following equation (sourced from sensor documentation) to calculate the number of particles per 0.01 cubic feet of air:
 
-### Sensor 3
 
-Brief description
 
 ### Video
 
@@ -53,6 +52,10 @@ here we take some hours of data from andruino and airnowapi, and we try to see t
 ### Graph4
 
 AQI
+
+### PM Utilities
+
+The 
 
 ### Dashboard
 
