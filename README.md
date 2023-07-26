@@ -53,7 +53,7 @@ In the colab file you will find evaluation of Temperature measure, Relative Humi
 ### Dashboard: Temperature, Relative Humidity, Particulates Matter, and AQI
 
 Here it is an screenshot of the dashboard that groups most useful graphs from all the ones we presented on our colab notebook.
-![Dashboard](images/dashboard.png.png)
+![Dashboard](images/dashboard.png)
 In this dashboard, for the first four graphs we are showing the Temperature measures with its mean and standar deviation. 
 The last one is an histogram of the AQI values, and it also says the relation with the AQI outside the house (locating the user zone by its zipcode or by latitude and longitude). 
 There it is also an implementation of audio alerts for the users, that prevents them in case the consentration of PM are too high, that the relative humidity is above 95%, or that the celsius degrees are above 46 which both things provoke the air dust sensor to fail.
