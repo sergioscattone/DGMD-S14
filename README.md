@@ -29,6 +29,8 @@ Maybe some video here: (example of how to embed a videohttps://github.com/alelie
 
 ## Software
 
+In this section we will take the input from the sensors and we will show it in different graphs.
+
 ### Tools
 
 We are using collab as tool to interact with each other and apply advances in our code. <br/>
@@ -36,9 +38,9 @@ For that reasons we have our graph solutions made in python with [Matplotlib](ht
 For gathering the enviromental information we are calling different APIs from [AirNow](https://docs.airnowapi.org/). <br/>
 Here it is our [collab notebook](https://colab.research.google.com/drive/1L0fGcY5KhRBeFsvSIR6Plb1Gl8LK7w7u) where we have many examples of API calls, examples of different graphs using Matplotlib and references for using and graphing linears and multi-linears regression (the bottom link).
 
-### Graph1
+### Graph1: Histogram of temperature, relative humidity and particle count
 
-Histogram of temperature, relative humidity, particle count
+
 
 ### Graph2
 
