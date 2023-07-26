@@ -39,7 +39,7 @@ To calculate pm2.5 concentration as mass per cubic meter of air, we convert the 
 
 ### Video
 
-Maybe some video here: (example of how to embed a videohttps://github.com/alelievr/Mixture/blob/0.4.0/README.md)
+![Andruino](videos/andruino.mp4)
 
 ## Software
 
