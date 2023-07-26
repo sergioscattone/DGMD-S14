@@ -4,7 +4,20 @@
 
 Our project aims to create an air quality sensor that could be used as a wearable and inform the user if the air quality around them is poor, prompting them to take action by turning on an air purifier or wearing a mask. <br/>
 We will use an Arduino dust sensor to build out a physical device, and display the output on a dashboard. <br/>
-On the dashboard we will also pull in air quality measures from other sources, like the Environmental Protection Agency (EPA). 
+On the dashboard we will also pull in air quality measures from other sources, like the Environmental Protection Agency (EPA). <br/>
+
+## Definitions
+
+### AQI
+The EPA developed the AQI, which reports levels of ozone, particle pollution, and other common air pollutants on the same scale. <br/>
+An AQI reading of 101 corresponds to a level above the national air quality standard - the higher the AQI rating, the greater the health impact. <br/>
+To know more about the AQI you can go to: [https://docs.airnowapi.org/aq101] <br/>
+
+### PM
+We will be focusing on measuring levels of particulate matter (PM) in the immediate area of the device using an Arduino dust sensor. <br/>
+The Arduino dust sensor collects counts of particles greater than 1 micron in size as air flows through the sensor. <br/>
+From those particle counts, we will have to estimate the total mass of particles present, as mass is the official reported standard for particulate matter used by the EPA. <br/>
+From those masses, we will be able to determine the Air Quality Index (AQI) measurement for particulate matter. <br/>
 
 ## Hardware
 
@@ -24,7 +37,6 @@ The Seeedlabs Grove Dust Sensor is a Shinyei PPD42 dust sensor vendored by Seeed
 To calculate pm2.5 concentration as mass per cubic meter of air, we convert the particle count from particles per 0.01 cubic feet to particles per cubic meter. We then need to make two key assumptions to enable us to calculate PM mass. First we need to determine the size of the particle. To do this, we assume that all detected partcles are uniformly distributed in size within the sensors detectable range (1um-2.5um), therefore we assume that all particles are of  the mean of  that rante, with a diameter of 1.75um. We also assume that all particles have the unit density, an assumption we've seen applied by [past studies](https://academic.oup.com/annweh/article/50/8/843/154938) using low cost sensors. We then calculate the total mass by multiplying the volume of the average particle (assuming that it's spherical) by the unit density and multiplying it by the particle count.
 
 
-
 ### Video
 
 Maybe some video here: (example of how to embed a videohttps://github.com/alelievr/Mixture/blob/0.4.0/README.md)
@@ -32,35 +44,30 @@ Maybe some video here: (example of how to embed a videohttps://github.com/alelie
 ## Software
 
 In this section we will take the input from the sensors and we will show it in different graphs.
-
-### Tools
-
-We are using collab as tool to interact with each other and apply advances in our code. <br/>
+We are using colab as tool to interact with each other and apply advances in our code. <br/>
 For that reasons we have our graph solutions made in python with [Matplotlib](https://matplotlib.org/). <br/>
-For gathering the enviromental information we are calling different APIs from [AirNow](https://docs.airnowapi.org/). <br/>
-Here it is our [collab notebook](https://colab.research.google.com/drive/1L0fGcY5KhRBeFsvSIR6Plb1Gl8LK7w7u) where we have many examples of API calls, examples of different graphs using Matplotlib and references for using and graphing linears and multi-linears regression (the bottom link).
+For gathering the enviromental information we are calling different APIs from [AirNowAPI](https://docs.airnowapi.org/). <br/>
+Here it is our [colab notebook](https://colab.research.google.com/drive/1L0fGcY5KhRBeFsvSIR6Plb1Gl8LK7w7u) where we have many examples of API calls, examples of different many analysis of parameters with their correlative graphs. <br/>
+In the colab file you will find evaluation of Temperature measure, Relative Humidity measure, Particulates Matter measure, a simulation of the effect of an air purifier, an AQI calculator and a comparative from the values inside the house and outside using the AirNowApi.
 
-### Graph1: Histogram of temperature, relative humidity and particle count
+### Dashboard: Temperature, Relative Humidity, Particulates Matter, and AQI
 
+Here it is an screenshot of the dashboard that groups most useful graphs from all the ones we presented on our colab notebook.
+![Dashboard](img/dashboard.png.png)
+In this dashboard, for the first four graphs we are showing the Temperature measures with its mean and standar deviation. <br/>
+The last one is an histogram of the AQI values, and it also says the relation with the AQI outside the house (locating the user zone by its zipcode or by latitude and longitude). <br/>
+There it is also an implementation of audio alerts for the users, that prevents them in case the consentration of PM are too high, that the relative humidity is above 95%, or that the celsius degrees are above 46 which both things provoke the air dust sensor to fail.
 
+### Colab and python files 
 
-### Graph2
+In this repository you will find the colab notebook in the `colab_notebook.ipynb` file and all the python code in the `dashboards_and_data.py` file which basically is the colab notebook exported as python code.
 
-Linear graph of temperature, relative humidity, particle count during the hours of the day
+### Sensonrs data
 
-### Graph3
+For collecting the sensors' data we use an script that is in `get_pm/get_pm.ino`. <br/>
+The algorithms used to calculate the AQI from the sensor data is modularized in the `pm_utils.py` file.  <br/>
+However, both colab notebook and python dashboard files have integrated all that is needed to run without the need to include the `get_pm/get_pm.ino` file.
 
-Multi linear regression temperature, relative humidity, particle with pollutions by airnowapi (API call)
-here we take some hours of data from andruino and airnowapi, and we try to see the relation between andruino meassures and environment pollution
+### Samples
 
-### Graph4
-
-AQI
-
-### PM Utilities
-
-The 
-
-### Dashboard
-
-shows all the grapsh, shows the data collected, and shows a button or something to start the air filtering (and maybe some schedule for filtering based on the data)
+In the `data_samples` you will see two files with samples that we have taken with the Andruino device. In them we have put the sensors close to a kitchen while using it to see the efects in the measures.
