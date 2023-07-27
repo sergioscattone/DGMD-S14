@@ -41,7 +41,7 @@ To calculate pm2.5 concentration as mass per cubic meter of air, we convert the 
 
 https://github.com/sergioscattone/DGMD-S14/assets/28077819/623c0216-bbf1-447c-b4d4-84fe7ad770af
 
-Full video: [Andruino](https://github.com/sergioscattone/DGMD-S14/blob/main/videos/andruino.mp4)
+Full video: [Andruino](https://drive.google.com/file/d/1E_q9jlfPgq9t-DJUWl3hPuZjOScIvuit/view)
 
 ## Software
 
