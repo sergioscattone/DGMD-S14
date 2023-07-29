@@ -1,12 +1,20 @@
 # Air Quality Control
 
-## Dashboard: Temperature, Relative Humidity, Particulates Matter, and AQI
+## Results
+
+### Dashboard
 
 ![Dashboard](images/dashboard.png)
 
 ## Alarms
 
 https://github.com/sergioscattone/DGMD-S14/assets/28077819/1971c597-5356-4baf-a0e9-539ff2d7a514
+
+## Demo
+
+https://github.com/sergioscattone/DGMD-S14/assets/28077819/623c0216-bbf1-447c-b4d4-84fe7ad770af
+
+Full video: [Andruino](https://drive.google.com/file/d/1E_q9jlfPgq9t-DJUWl3hPuZjOScIvuit/view)
 
 ## Solution
 
@@ -47,12 +55,6 @@ The Seeedlabs Grove Dust Sensor is a Shinyei PPD42 dust sensor vendored by Seeed
 
 To calculate pm2.5 concentration as mass per cubic meter of air, we convert the particle count from particles per 0.01 cubic feet to particles per cubic meter. We then need to make two key assumptions to enable us to calculate PM mass. First we need to determine the size of the particle. To do this, we assume that all detected partcles are uniformly distributed in size within the sensors detectable range (1um-2.5um), therefore we assume that all particles are of  the mean of  that rante, with a diameter of 1.75um. We also assume that all particles have the unit density, an assumption we've seen applied by [past studies](https://academic.oup.com/annweh/article/50/8/843/154938) using low cost sensors. We then calculate the total mass by multiplying the volume of the average particle (assuming that it's spherical) by the unit density and multiplying it by the particle count.
 
-
-### Video
-
-https://github.com/sergioscattone/DGMD-S14/assets/28077819/623c0216-bbf1-447c-b4d4-84fe7ad770af
-
-Full video: [Andruino](https://drive.google.com/file/d/1E_q9jlfPgq9t-DJUWl3hPuZjOScIvuit/view)
 
 ## Software
 
