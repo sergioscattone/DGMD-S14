@@ -23,7 +23,8 @@ In this demo video we show how we are taking the sensors data from the Arduno de
 
 Full video: [Andruino](https://drive.google.com/file/d/1E_q9jlfPgq9t-DJUWl3hPuZjOScIvuit/view)
 
-## Solution
+## Introduction
+In a world dealing with increasing wildfires, growing pollution, and other environmental concerns, the air we breathe can be negatively affected. At the same time, consumers are becoming more health conscious. This creates a market for wearable air quality monitors and air purifiers, which has not yet fully been explored.
 
 Our project aims to create an air quality sensor that could be used as a wearable and inform the user if the air quality around them is poor, prompting them to take action by turning on an air purifier or wearing a mask.  
 We will use an Arduino dust sensor to build out a physical device, and display the output on a dashboard.  
@@ -41,7 +42,7 @@ The Arduino dust sensor collects counts of particles greater than 1 micron in si
 From those particle counts, we will have to estimate the total mass of particles present, as mass is the official reported standard for particulate matter used by the EPA.  
 From those masses, we will be able to determine the Air Quality Index (AQI) measurement for particulate matter. 
 
-## Hardware
+## Background and Context: Hardware
 
 ### Arduino
 
@@ -69,7 +70,7 @@ We also assume that all particles have the unit density, an assumption we've see
 We then calculate the total mass by multiplying the volume of the average particle (assuming that it's spherical) by the unit density and multiplying it by the particle count.
 
 
-## Software
+## Background and Context: Software
 
 In this section we will take the input from the sensors and we will show it in different graphs.  
 We are using colab as tool to interact with each other and apply advances in our code.  
@@ -90,5 +91,4 @@ However, both colab notebook and python dashboard files have integrated all that
 In the `data_samples` you will see two files with samples that we have taken with the Andruino device. In them we have put the sensors close to a kitchen while using it to see the efects in the measures.
 
 ### License
-All the sotfware presented in this repo is under [MIT License](LICENSE)
-.
+All the sotfware presented in this repo is under [MIT License](LICENSE).
