@@ -1,10 +1,21 @@
-# Air Quality team - Wearable Devices and Computer Vision
+# Air Quality Control
+
+## Dashboard: Temperature, Relative Humidity, Particulates Matter, and AQI
+
+![Dashboard](images/dashboard.png)
+
+## Alarms
+
+
 
 ## Solution
 
 Our project aims to create an air quality sensor that could be used as a wearable and inform the user if the air quality around them is poor, prompting them to take action by turning on an air purifier or wearing a mask. 
 We will use an Arduino dust sensor to build out a physical device, and display the output on a dashboard. 
 On the dashboard we will also pull in air quality measures from other sources, like the Environmental Protection Agency (EPA). 
+In this dashboard, for the first four graphs we are showing the Temperature measures with its mean and standar deviation. 
+The last one is an histogram of the AQI values, and it also says the relation with the AQI outside the house (locating the user zone by its zipcode or by latitude and longitude). 
+There it is also an implementation of audio alerts for the users, that prevents them in case the consentration of PM are too high, that the relative humidity is above 95%, or that the celsius degrees are above 46 which both things provoke the air dust sensor to fail.
 
 ## Definitions
 
@@ -51,14 +62,6 @@ For that reasons we have our graph solutions made in python with [Matplotlib](ht
 For gathering the enviromental information we are calling different APIs from [AirNowAPI](https://docs.airnowapi.org/). 
 Here it is our [colab notebook](https://colab.research.google.com/drive/1L0fGcY5KhRBeFsvSIR6Plb1Gl8LK7w7u) where we have many examples of API calls, examples of different many analysis of parameters with their correlative graphs. 
 In the colab file you will find evaluation of Temperature measure, Relative Humidity measure, Particulates Matter measure, a simulation of the effect of an air purifier, an AQI calculator and a comparative from the values inside the house and outside using the AirNowApi.
-
-### Dashboard: Temperature, Relative Humidity, Particulates Matter, and AQI
-
-Here it is an screenshot of the dashboard that groups most useful graphs from all the ones we presented on our colab notebook.
-![Dashboard](images/dashboard.png)
-In this dashboard, for the first four graphs we are showing the Temperature measures with its mean and standar deviation. 
-The last one is an histogram of the AQI values, and it also says the relation with the AQI outside the house (locating the user zone by its zipcode or by latitude and longitude). 
-There it is also an implementation of audio alerts for the users, that prevents them in case the consentration of PM are too high, that the relative humidity is above 95%, or that the celsius degrees are above 46 which both things provoke the air dust sensor to fail.
 
 ### Colab and python files 
 
