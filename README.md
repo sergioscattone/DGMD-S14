@@ -82,13 +82,13 @@ In this repository you will find the colab notebook in the [colab_notebook.ipynb
 
 ### Sensonrs data
 
-For collecting the sensors' data we use an script that is in `get_pm/get_pm.ino`.  
-The algorithms used to calculate the AQI from the sensor data is modularized in the `pm_utils.py` file.  
-However, both colab notebook and python dashboard files have integrated all that is needed to run without the need to include the `get_pm/get_pm.ino` file.
+For collecting the sensors' data we use an script that is in [get_pm.in](get_pm.ino).  
+The algorithms used to calculate the AQI from the sensor data is modularized in the [pm_utils.py](pm_utils.py) file.  
+However, both colab notebook and python dashboard files have integrated all that is needed to run without the need to include the get_pm.ino file.
 
 ### Samples
 
-In the `data_samples` you will see two files with samples that we have taken with the Andruino device. In them we have put the sensors close to a kitchen while using it to see the efects in the measures.
+In the <b>data_samples</b> folder you will see two files with samples that we have taken with the Andruino device. In them we have put the sensors close to a kitchen while using it to see the efects in the measures.
 
 ### License
 All the sotfware presented in this repo is under [MIT License](LICENSE).
