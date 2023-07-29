@@ -62,12 +62,12 @@ To calculate pm2.5 concentration as mass per cubic meter of air, we convert the 
 
 ## Software
 
-In this section we will take the input from the sensors and we will show it in different graphs.
+In this section we will take the input from the sensors and we will show it in different graphs. 
 We are using colab as tool to interact with each other and apply advances in our code. 
 For that reasons we have our graph solutions made in python with [Matplotlib](https://matplotlib.org/). 
 For gathering the enviromental information we are calling different APIs from [AirNowAPI](https://docs.airnowapi.org/). 
 Here it is our [colab notebook](https://colab.research.google.com/drive/1L0fGcY5KhRBeFsvSIR6Plb1Gl8LK7w7u) where we have many examples of API calls, examples of different many analysis of parameters with their correlative graphs. 
-In the colab file you will find evaluation of Temperature measure, Relative Humidity measure, Particulates Matter measure, a simulation of the effect of an air purifier, an AQI calculator and a comparative from the values inside the house and outside using the AirNowApi.
+In the colab file you will find evaluation of Temperature measure, Relative Humidity measure, Particulates Matter measure, a simulation of the effect of an air purifier, an AQI calculator and a comparative from the values inside the house and outside using the AirNowApi. 
 In this repository you will find the colab notebook in the `colab_notebook.ipynb` file which basically is the colab notebook exported.
 
 ### Sensonrs data
