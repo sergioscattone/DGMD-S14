@@ -1,4 +1,4 @@
-# Air Quality Control
+# Measuring Air Quality
 
 ## Dashboard
 
