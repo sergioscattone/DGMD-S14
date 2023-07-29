@@ -84,7 +84,7 @@ In this repository you will find the colab notebook in the [colab_notebook.ipynb
 
 For collecting the sensors' data we use an script that is in [get_pm.in](get_pm.ino).  
 The algorithms used to calculate the AQI from the sensor data is modularized in the [pm_utils.py](pm_utils.py) file.  
-However, both colab notebook and python dashboard files have integrated all that is needed to run without the need to include the get_pm.ino file.
+However, both colab notebook and python dashboard files have integrated all that is needed to run without the need to include the <b>get_pm.ino</b> file.
 
 ### Samples
 
