@@ -1,18 +1,25 @@
 # Air Quality Control
 
-## Results
-
-### Dashboard
+## Dashboard
 
 ![Dashboard](images/dashboard.png)
+
+In this dashboard, for the first four graphs we are showing the Temperature measures with its mean and standar deviation. 
+The last one is an histogram of the AQI values, and it also says the relation with the AQI outside the house (locating the user zone by its zipcode or by latitude and longitude). 
+There it is also an implementation of audio alerts for the users, that prevents them in case the consentration of PM are too high, that the relative humidity is above 95%, or that the celsius degrees are above 46 which both things provoke the air dust sensor to fail.
 
 ## Alarms
 
 https://github.com/sergioscattone/DGMD-S14/assets/28077819/1971c597-5356-4baf-a0e9-539ff2d7a514
 
+We have alarms that we trigger in case we detect there is a risk for the user health in our Arduino measures.
+We have ser alarms for when: temperature is over 45 celsius grades, relative humidity is over 95%, AQI is over inside the house than outside, AQI is over a high level (regarding how high outside)
+
 ## Demo
 
 https://github.com/sergioscattone/DGMD-S14/assets/28077819/623c0216-bbf1-447c-b4d4-84fe7ad770af
+
+In this demo video we show how we are taking the sensors data from the Arduno device inside the house. You can check all the details below in the Hardware section.
 
 Full video: [Andruino](https://drive.google.com/file/d/1E_q9jlfPgq9t-DJUWl3hPuZjOScIvuit/view)
 
@@ -21,9 +28,6 @@ Full video: [Andruino](https://drive.google.com/file/d/1E_q9jlfPgq9t-DJUWl3hPuZj
 Our project aims to create an air quality sensor that could be used as a wearable and inform the user if the air quality around them is poor, prompting them to take action by turning on an air purifier or wearing a mask. 
 We will use an Arduino dust sensor to build out a physical device, and display the output on a dashboard. 
 On the dashboard we will also pull in air quality measures from other sources, like the Environmental Protection Agency (EPA). 
-In this dashboard, for the first four graphs we are showing the Temperature measures with its mean and standar deviation. 
-The last one is an histogram of the AQI values, and it also says the relation with the AQI outside the house (locating the user zone by its zipcode or by latitude and longitude). 
-There it is also an implementation of audio alerts for the users, that prevents them in case the consentration of PM are too high, that the relative humidity is above 95%, or that the celsius degrees are above 46 which both things provoke the air dust sensor to fail.
 
 ## Definitions
 
@@ -78,3 +82,7 @@ However, both colab notebook and python dashboard files have integrated all that
 ### Samples
 
 In the `data_samples` you will see two files with samples that we have taken with the Andruino device. In them we have put the sensors close to a kitchen while using it to see the efects in the measures.
+
+### License
+All the sotfware presented in this repo is under [MIT License](LICENSE)
+.
